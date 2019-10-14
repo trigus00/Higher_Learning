@@ -7,7 +7,7 @@ let margin = {
   top: 25,
   right: 40,
   bottom: 100,
-  left: 100
+  left: 120
 };
 
 let width = svgWidth - margin.left - margin.right;
@@ -29,17 +29,17 @@ let chartGroup = svg.append("g")
 //=============================================================================================================
 
 // Initial Params
-let chosenXAxis = "poverty";  
-let chosenYAxis = "healthcare";
+let chosenXAxis = "cost_per_stu";  
+let chosenYAxis = "cost_per_prisoner";
 
 //***************************************************************************************
 
 // function used for updating x-scale var upon click on axis label
-function xScale(censusData, chosenXAxis) {
+function xScale(edCorrData, chosenXAxis) {
   // create scales
   var xLinearScale = d3.scaleLinear()
-    .domain([d3.min(censusData, d => d[chosenXAxis]) * 0.8,
-      d3.max(censusData, d => d[chosenXAxis]) * 1.2
+    .domain([d3.min(edCorrData, d => d[chosenXAxis]) * 0.8,
+      d3.max(edCorrData, d => d[chosenXAxis]) * 1.2
     ])
     .range([0, width]);
 
@@ -47,11 +47,11 @@ function xScale(censusData, chosenXAxis) {
 }
 
 // function used for updating y-scale var upon click on axis label
-function yScale(censusData, chosenYAxis) {
+function yScale(edCorrData, chosenYAxis) {
   // create scales
   var yLinearScale = d3.scaleLinear()
-    .domain([d3.min(censusData, d => d[chosenYAxis]),
-      d3.max(censusData, d => d[chosenYAxis])
+    .domain([d3.min(edCorrData, d => d[chosenYAxis]),
+      d3.max(edCorrData, d => d[chosenYAxis])
     ])
     .range([height, 0]);
 
@@ -112,26 +112,27 @@ function renderText(textGroup, newXScale, newYScale, chosenXAxis, chosenYAxis) {
 //Axis function used for updating circles group with new tooltip
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup) {
 
-  if (chosenXAxis === "poverty") {
-    var xlabel = "Poverty:";
+
+  if (chosenXAxis === "cost_per_stu") {
+    var xlabel = "Cost per Student:";
+    var xsuffix = "";
+  } else if (chosenXAxis ==="stu_to_pop_percent") {
+    var xlabel = "Student to State Pop:";
     var xsuffix = "%";
-  } else if (chosenXAxis ==="age") {
-    var xlabel = "Age (Median):";
-    var xsuffix = "";
   } else {
-    var xlabel = "Household Income (Median):";
-    var xsuffix = "";
+    var xlabel = "Total Education Exp:";
+    var xsuffix = " (1k)";
   }
 
-  if (chosenYAxis === "healthcare") {
-     var ylabel = "Healtchare:";
-     var ysuffix = "%";
-   } else if (chosenYAxis ==="smokes") {
-     var ylabel = "Smokes:";
+  if (chosenYAxis === "cost_per_prisoner") {
+     var ylabel = "Cost per Prisoner:";
+     var ysuffix = "";
+   } else if (chosenYAxis ==="prisoner_to_pop_percent") {
+     var ylabel = "Prisoner to State Pop:";
      var ysuffix = "%";
    } else {
-     var ylabel = "Obesity:";
-     var ysuffix = "%";
+     var ylabel = "Total Correction Exp:";
+     var ysuffix = " (1k)";
    }
 
   
@@ -184,27 +185,29 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup) {
 //*************************************************************************
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("assets/data/data.csv").then(function(censusData, err) {
+d3.csv("assets/data/ed_corr_data.csv").then(function(edCorrData, err) {
   if (err) throw err;
 
+
+
   // parse data
-  censusData.forEach(function(data) {
-    data.poverty = +data.poverty;
-    data.age = +data.age;
-    data.income = +data.income;
-    data.obesity = +data.obesity;
-    data.smokes = +data.smokes;
-    data.healthcare = +data.healthcare;
+  edCorrData.forEach(function(data) {
+    data.cost_per_stu = +data.cost_per_stu;
+    data.stu_to_pop_percent = +data.stu_to_pop_percent;
+    data.ed_total_exp_1k = +data.ed_total_exp_1k;
+    data.cost_per_prisoner = +data.cost_per_prisoner;
+    data.prisoner_to_pop_percent = +data.prisoner_to_pop_percent;
+    data.corr_total_exp_1k = +data.corr_total_exp_1k;
   });
 
 
 //********************************************************************************
 
 // xLinearScale function above csv import
-var xLinearScale = xScale(censusData, chosenXAxis);
+var xLinearScale = xScale(edCorrData, chosenXAxis);
 
 // Create yLinearscale function
-var yLinearScale = yScale(censusData, chosenYAxis)
+var yLinearScale = yScale(edCorrData, chosenYAxis)
 
 // Create initial axis functions
 var bottomAxis = d3.axisBottom(xLinearScale);
@@ -230,7 +233,7 @@ carolinaBlue = d3.rgb("#99badd")
 
 // append initial circles
 var circlesGroup = chartGroup.selectAll("circle")
-  .data(censusData)
+  .data(edCorrData)
   .enter()
   .append("circle")
   .attr("cx", d => xLinearScale(d[chosenXAxis]))
@@ -241,19 +244,20 @@ var circlesGroup = chartGroup.selectAll("circle")
 
 
 let textGroup = chartGroup.selectAll()
-  .data(censusData)
+  .data(edCorrData)
   .enter()
   .append("text")
   .attr("text-anchor", "middle")
   // .attr("dx", function(d){return -10})
   .attr("dy", function(d){return +5})
-  .text(d => d.abbr)
+  .text(d => d.state_abbr)
   .attr("x", d => xLinearScale(d[chosenXAxis]))
   .attr("y", d => yLinearScale(d[chosenYAxis]))
   .attr("font-size", "15px")
   .attr("font-weight", "bold")
   .attr("fill", "white");
 
+  
 
 
 // Create group for 3 x- axis labels
@@ -261,26 +265,26 @@ var labelsXGroup = chartGroup.append("g")
 .attr("transform", `translate(${width / 2}, ${height + 20})`);
 
 // Create X axes labels
-var povertyLabel = labelsXGroup.append("text")
+var cost_per_stuLabel = labelsXGroup.append("text")
   .attr("x", 0)
   .attr("y", 20)
-  .attr("xValue", "poverty") // value to grab for event listener
+  .attr("xValue", "cost_per_stu") // value to grab for event listener
   .classed("active", true)
-  .text("In Poverty (%)");
+  .text("Cost per Student");
 
-var ageLabel = labelsXGroup.append("text")
+var stu_to_pop_percentLabel = labelsXGroup.append("text")
   .attr("x", 0)
   .attr("y", 45)
-  .attr("xValue", "age") // value to grab for event listener
+  .attr("xValue", "stu_to_pop_percent") // value to grab for event listener
   .classed("inactive", true)
-  .text("Age (Median)");
+  .text("Student to State Population (%)");
 
-var houseIncomeLabel = labelsXGroup.append("text")
+var ed_total_exp_1kLabel = labelsXGroup.append("text")
   .attr("x", 0)
   .attr("y", 70)
-  .attr("xValue", "income") // value to grab for event listener
+  .attr("xValue", "ed_total_exp_1k") // value to grab for event listener
   .classed("inactive", true)
-  .text("Household Income (Median)");
+  .text("Toal Education Expense (in $1,000)");
 
 
 
@@ -290,29 +294,29 @@ var labelsYGroup = chartGroup.append("g")
   .attr("transform", "rotate(-90)");
 
 // Create Y axes Labels
-var healthcareLabel = labelsYGroup.append("text")
+var cost_per_prisonerLabel = labelsYGroup.append("text")
   .attr("y", 0 - margin.left + 50)
   .attr("x", 0 - (height / 2))
-  .attr("yValue", "healthcare") // value to grab for event listener
+  .attr("yValue", "cost_per_prisoner") // value to grab for event listener
   .attr("dy", "1em")
   .classed("active", true)
-  .text("Lacks Healthcare (%)");
+  .text("Cost per Prisoner");
 
-var smokesLabel = labelsYGroup.append("text")
+var prisoner_to_pop_percentLabel = labelsYGroup.append("text")
   .attr("y", 0 - margin.left + 25)
   .attr("x", 0 - (height / 2))
-  .attr("yValue", "smokes") // value to grab for event listener
+  .attr("yValue", "prisoner_to_pop_percent") // value to grab for event listener
   .attr("dy", "1em")
   .classed("inactive", true)
-  .text("Smokes (%)");
+  .text("Prisoner to State Population (%)");
 
-var obesityLabel = labelsYGroup.append("text")
+var corr_total_exp_1kLabel = labelsYGroup.append("text")
   .attr("y", 0 - margin.left)
   .attr("x", 0 - (height / 2))
-  .attr("yValue", "obesity") // value to grab for event listener
+  .attr("yValue", "corr_total_exp_1k") // value to grab for event listener
   .attr("dy", "1em")
   .classed("inactive", true)
-  .text("Obese (%)");
+  .text("Total Correction Expense (in $1,000)");
 
  
 
@@ -336,7 +340,7 @@ labelsXGroup.selectAll("text")
 
     // functions here found above csv import
     // updates x scale for new data
-     xLinearScale = xScale(censusData, chosenXAxis);
+     xLinearScale = xScale(edCorrData, chosenXAxis);
 
     // updates x axis with transition
      xAxis = renderXAxes(xLinearScale, xAxis);
@@ -349,35 +353,35 @@ labelsXGroup.selectAll("text")
      circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup);
 
     // XAxis Lables: changes classes to change bold text 
-     if (chosenXAxis === "age") {
-        povertyLabel
+     if (chosenXAxis === "stu_to_pop_percent") {
+        cost_per_stuLabel
           .classed("active", false)
           .classed("inactive", true);
-        ageLabel
+        stu_to_pop_percentLabel
          .classed("active", true)
          .classed("inactive", false);
-        houseIncomeLabel
+        ed_total_exp_1kLabel
           .classed("active", false)
           .classed("inactive", true);
         
-     } else if (chosenXAxis === "income") {
-        povertyLabel
+     } else if (chosenXAxis === "ed_total_exp_1k") {
+        cost_per_stuLabel
           .classed("active", false)
           .classed("inactive", true);  
-        ageLabel
+        stu_to_pop_percentLabel
           .classed("active", false)
           .classed("inactive", true);
-        houseIncomeLabel
+        ed_total_exp_1kLabel
           .classed("active", true)
           .classed("inactive", false);
      } else {
-        povertyLabel
+        cost_per_stuLabel
          .classed("active", true)
          .classed("inactive", false);
-        ageLabel
+        stu_to_pop_percentLabel
           .classed("active", false)
           .classed("inactive", true);
-        houseIncomeLabel
+        ed_total_exp_1kLabel
           .classed("active", false)
           .classed("inactive", true);
      }
@@ -400,7 +404,7 @@ labelsYGroup.selectAll("text")
 
     // functions here found above csv import
     // updates y scale for new data
-     yLinearScale = yScale(censusData, chosenYAxis);
+     yLinearScale = yScale(edCorrData, chosenYAxis);
 
     // updates Y axis with transition
      yAxis = renderYAxes(yLinearScale, yAxis);
@@ -413,35 +417,35 @@ labelsYGroup.selectAll("text")
      circlesGroup = updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup);
    
      // YAxis Lables: changes classes to change bold text  
-     if (chosenYAxis === "smokes") {
-        healthcareLabel
+     if (chosenYAxis === "prisoner_to_pop_percent") {
+        cost_per_prisonerLabel
           .classed("active", false)
           .classed("inactive", true);
-        smokesLabel
+        prisoner_to_pop_percentLabel
          .classed("active", true)
          .classed("inactive", false);
-        obesityLabel
+        corr_total_exp_1kLabel
           .classed("active", false)
           .classed("inactive", true);
         
-     } else if (chosenYAxis === "obesity") {
-        healthcareLabel
+     } else if (chosenYAxis === "corr_total_exp_1k") {
+        cost_per_prisonerLabel
           .classed("active", false)
           .classed("inactive", true);  
-        smokesLabel
+        prisoner_to_pop_percentLabel
           .classed("active", false)
           .classed("inactive", true);
-        obesityLabel
+        corr_total_exp_1kLabel
           .classed("active", true)
           .classed("inactive", false);
      } else {
-        healthcareLabel
+        cost_per_prisonerLabel
          .classed("active", true)
          .classed("inactive", false);
-        smokesLabel
+        prisoner_to_pop_percentLabel
           .classed("active", false)
           .classed("inactive", true);
-        obesityLabel
+        corr_total_exp_1kLabel
           .classed("active", false)
           .classed("inactive", true);
      }

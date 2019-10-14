@@ -1,0 +1,205 @@
+LocationType,Location,Lat,Long ,Achievement Level,TimeFrame,DataFormat,Data
+State,Alabama,32.806671,-86.79113,Below basic,2017,Percent,0.37
+State,Alabama,32.806671,-86.79113,At or above basic,2017,Percent,0.63
+State,Alabama,32.806671,-86.79113,Below proficient,2017,Percent,0.69
+State,Alabama,32.806671,-86.79113,At or above proficient,2017,Percent,0.31
+State,Alaska,61.370716,-152.404419,Below basic,2017,Percent,0.44
+State,Alaska,61.370716,-152.404419,At or above basic,2017,Percent,0.56
+State,Alaska,61.370716,-152.404419,Below proficient,2017,Percent,0.72
+State,Alaska,61.370716,-152.404419,At or above proficient,2017,Percent,0.28
+State,Arizona,33.729759,-111.431221,Below basic,2017,Percent,0.39
+State,Arizona,33.729759,-111.431221,At or above basic,2017,Percent,0.61
+State,Arizona,33.729759,-111.431221,Below proficient,2017,Percent,0.7
+State,Arizona,33.729759,-111.431221,At or above proficient,2017,Percent,0.3
+State,Arkansas,34.96116203,-92.373123,Below basic,2017,Percent,0.37
+State,Arkansas,34.96116203,-92.373123,At or above basic,2017,Percent,0.63
+State,Arkansas,34.96116203,-92.373123,Below proficient,2017,Percent,0.69
+State,Arkansas,34.96116203,-92.373123,At or above proficient,2017,Percent,0.31
+State,California,36.116203,-119.681564,Below basic,2017,Percent,0.39
+State,California,36.116203,-119.681564,At or above basic,2017,Percent,0.61
+State,California,36.116203,-119.681564,Below proficient,2017,Percent,0.69
+State,California,36.116203,-119.681564,At or above proficient,2017,Percent,0.31
+State,Colorado,39.059811,-105.311104,Below basic,2017,Percent,0.29
+State,Colorado,39.059811,-105.311104,At or above basic,2017,Percent,0.71
+State,Colorado,39.059811,-105.311104,Below proficient,2017,Percent,0.6
+State,Colorado,39.059811,-105.311104,At or above proficient,2017,Percent,0.4
+State,Connecticut,41.597782,-72.755371,Below basic,2017,Percent,0.26
+State,Connecticut,41.597782,-72.755371,At or above basic,2017,Percent,0.74
+State,Connecticut,41.597782,-72.755371,Below proficient,2017,Percent,0.57
+State,Connecticut,41.597782,-72.755371,At or above proficient,2017,Percent,0.43
+State,Delaware,39.318523,-75.507141,Below basic,2017,Percent,0.33
+State,Delaware,39.318523,-75.507141,At or above basic,2017,Percent,0.67
+State,Delaware,39.318523,-75.507141,Below proficient,2017,Percent,0.64
+State,Delaware,39.318523,-75.507141,At or above proficient,2017,Percent,0.36
+City,District of Columbia,38.897438,-77.026817,Below basic,2017,Percent,0.44
+City,District of Columbia,38.897438,-77.026817,At or above basic,2017,Percent,0.56
+City,District of Columbia,38.897438,-77.026817,Below proficient,2017,Percent,0.71
+City,District of Columbia,38.897438,-77.026817,At or above proficient,2017,Percent,0.29
+State,Florida,27.766279,-81.686783,Below basic,2017,Percent,0.25
+State,Florida,27.766279,-81.686783,At or above basic,2017,Percent,0.75
+State,Florida,27.766279,-81.686783,Below proficient,2017,Percent,0.59
+State,Florida,27.766279,-81.686783,At or above proficient,2017,Percent,0.41
+State,Georgia,33.040619,-83.643074,Below basic,2017,Percent,0.34
+State,Georgia,33.040619,-83.643074,At or above basic,2017,Percent,0.66
+State,Georgia,33.040619,-83.643074,Below proficient,2017,Percent,0.65
+State,Georgia,33.040619,-83.643074,At or above proficient,2017,Percent,0.35
+State,Hawaii,21.094318,-157.498337,Below basic,2017,Percent,0.38
+State,Hawaii,21.094318,-157.498337,At or above basic,2017,Percent,0.62
+State,Hawaii,21.094318,-157.498337,Below proficient,2017,Percent,0.68
+State,Hawaii,21.094318,-157.498337,At or above proficient,2017,Percent,0.32
+State,Idaho,44.240459,-114.478828,Below basic,2017,Percent,0.3
+State,Idaho,44.240459,-114.478828,At or above basic,2017,Percent,0.7
+State,Idaho,44.240459,-114.478828,Below proficient,2017,Percent,0.62
+State,Idaho,44.240459,-114.478828,At or above proficient,2017,Percent,0.38
+State,Illinois,40.349457,-88.986137,Below basic,2017,Percent,0.34
+State,Illinois,40.349457,-88.986137,At or above basic,2017,Percent,0.66
+State,Illinois,40.349457,-88.986137,Below proficient,2017,Percent,0.65
+State,Illinois,40.349457,-88.986137,At or above proficient,2017,Percent,0.35
+State,Indiana,39.849426,-86.258278,Below basic,2017,Percent,0.27
+State,Indiana,39.849426,-86.258278,At or above basic,2017,Percent,0.73
+State,Indiana,39.849426,-86.258278,Below proficient,2017,Percent,0.59
+State,Indiana,39.849426,-86.258278,At or above proficient,2017,Percent,0.41
+State,Iowa,42.011539,-93.210526,Below basic,2017,Percent,0.31
+State,Iowa,42.011539,-93.210526,At or above basic,2017,Percent,0.69
+State,Iowa,42.011539,-93.210526,Below proficient,2017,Percent,0.64
+State,Iowa,42.011539,-93.210526,At or above proficient,2017,Percent,0.36
+State,Kansas,38.5266,-96.726486,Below basic,2017,Percent,0.3
+State,Kansas,38.5266,-96.726486,At or above basic,2017,Percent,0.7
+State,Kansas,38.5266,-96.726486,Below proficient,2017,Percent,0.63
+State,Kansas,38.5266,-96.726486,At or above proficient,2017,Percent,0.37
+State,Kentucky,37.66814,-84.670067,Below basic,2017,Percent,0.3
+State,Kentucky,37.66814,-84.670067,At or above basic,2017,Percent,0.7
+State,Kentucky,37.66814,-84.670067,Below proficient,2017,Percent,0.62
+State,Kentucky,37.66814,-84.670067,At or above proficient,2017,Percent,0.38
+State,Louisiana,31.169546,-91.867805,Below basic,2017,Percent,0.44
+State,Louisiana,31.169546,-91.867805,At or above basic,2017,Percent,0.56
+State,Louisiana,31.169546,-91.867805,Below proficient,2017,Percent,0.74
+State,Louisiana,31.169546,-91.867805,At or above proficient,2017,Percent,0.26
+State,Maine,44.693947,-69.381927,Below basic,2017,Percent,0.33
+State,Maine,44.693947,-69.381927,At or above basic,2017,Percent,0.67
+State,Maine,44.693947,-69.381927,Below proficient,2017,Percent,0.64
+State,Maine,44.693947,-69.381927,At or above proficient,2017,Percent,0.36
+State,Maryland,39.063946,-76.802101,Below basic,2017,Percent,0.31
+State,Maryland,39.063946,-76.802101,At or above basic,2017,Percent,0.69
+State,Maryland,39.063946,-76.802101,Below proficient,2017,Percent,0.6
+State,Maryland,39.063946,-76.802101,At or above proficient,2017,Percent,0.4
+State,Massachusetts,42.230171,-71.530106,Below basic,2017,Percent,0.2
+State,Massachusetts,42.230171,-71.530106,At or above basic,2017,Percent,0.8
+State,Massachusetts,42.230171,-71.530106,Below proficient,2017,Percent,0.49
+State,Massachusetts,42.230171,-71.530106,At or above proficient,2017,Percent,0.51
+State,Michigan,43.326618,-84.536095,Below basic,2017,Percent,0.36
+State,Michigan,43.326618,-84.536095,At or above basic,2017,Percent,0.64
+State,Michigan,43.326618,-84.536095,Below proficient,2017,Percent,0.68
+State,Michigan,43.326618,-84.536095,At or above proficient,2017,Percent,0.32
+State,Minnesota,45.694454,-93.900192,Below basic,2017,Percent,0.29
+State,Minnesota,45.694454,-93.900192,At or above basic,2017,Percent,0.71
+State,Minnesota,45.694454,-93.900192,Below proficient,2017,Percent,0.61
+State,Minnesota,45.694454,-93.900192,At or above proficient,2017,Percent,0.39
+State,Mississippi,32.741646,-89.678696,Below basic,2017,Percent,0.4
+State,Mississippi,32.741646,-89.678696,At or above basic,2017,Percent,0.6
+State,Mississippi,32.741646,-89.678696,Below proficient,2017,Percent,0.73
+State,Mississippi,32.741646,-89.678696,At or above proficient,2017,Percent,0.27
+State,Missouri,38.456085,-92.288368,Below basic,2017,Percent,0.31
+State,Missouri,38.456085,-92.288368,At or above basic,2017,Percent,0.69
+State,Missouri,38.456085,-92.288368,Below proficient,2017,Percent,0.63
+State,Missouri,38.456085,-92.288368,At or above proficient,2017,Percent,0.37
+State,Montana,46.921925,-110.454353,Below basic,2017,Percent,0.3
+State,Montana,46.921925,-110.454353,At or above basic,2017,Percent,0.7
+State,Montana,46.921925,-110.454353,Below proficient,2017,Percent,0.62
+State,Montana,46.921925,-110.454353,At or above proficient,2017,Percent,0.38
+State,Nebraska,41.12537,-98.268082,Below basic,2017,Percent,0.28
+State,Nebraska,41.12537,-98.268082,At or above basic,2017,Percent,0.72
+State,Nebraska,41.12537,-98.268082,Below proficient,2017,Percent,0.62
+State,Nebraska,41.12537,-98.268082,At or above proficient,2017,Percent,0.38
+State,Nevada,38.313515,-117.055374,Below basic,2017,Percent,0.39
+State,Nevada,38.313515,-117.055374,At or above basic,2017,Percent,0.61
+State,Nevada,38.313515,-117.055374,Below proficient,2017,Percent,0.69
+State,Nevada,38.313515,-117.055374,At or above proficient,2017,Percent,0.31
+State,New Hampshire,43.452492,-71.563896,Below basic,2017,Percent,0.25
+State,New Hampshire,43.452492,-71.563896,At or above basic,2017,Percent,0.75
+State,New Hampshire,43.452492,-71.563896,Below proficient,2017,Percent,0.57
+State,New Hampshire,43.452492,-71.563896,At or above proficient,2017,Percent,0.43
+State,New Jersey,40.298904,-74.521011,Below basic,2017,Percent,0.22
+State,New Jersey,40.298904,-74.521011,At or above basic,2017,Percent,0.78
+State,New Jersey,40.298904,-74.521011,Below proficient,2017,Percent,0.51
+State,New Jersey,40.298904,-74.521011,At or above proficient,2017,Percent,0.49
+State,New Mexico,34.840515,-106.248482,Below basic,2017,Percent,0.46
+State,New Mexico,34.840515,-106.248482,At or above basic,2017,Percent,0.54
+State,New Mexico,34.840515,-106.248482,Below proficient,2017,Percent,0.75
+State,New Mexico,34.840515,-106.248482,At or above proficient,2017,Percent,0.25
+State,New York,42.165726,-74.948051,Below basic,2017,Percent,0.32
+State,New York,42.165726,-74.948051,At or above basic,2017,Percent,0.68
+State,New York,42.165726,-74.948051,Below proficient,2017,Percent,0.64
+State,New York,42.165726,-74.948051,At or above proficient,2017,Percent,0.36
+State,North Carolina,35.630066,-79.806419,Below basic,2017,Percent,0.31
+State,North Carolina,35.630066,-79.806419,At or above basic,2017,Percent,0.69
+State,North Carolina,35.630066,-79.806419,Below proficient,2017,Percent,0.61
+State,North Carolina,35.630066,-79.806419,At or above proficient,2017,Percent,0.39
+State,North Dakota,47.528912,-99.784012,Below basic,2017,Percent,0.3
+State,North Dakota,47.528912,-99.784012,At or above basic,2017,Percent,0.7
+State,North Dakota,47.528912,-99.784012,Below proficient,2017,Percent,0.66
+State,North Dakota,47.528912,-99.784012,At or above proficient,2017,Percent,0.34
+State,Ohio,40.388783,-82.764915,Below basic,2017,Percent,0.29
+State,Ohio,40.388783,-82.764915,At or above basic,2017,Percent,0.71
+State,Ohio,40.388783,-82.764915,Below proficient,2017,Percent,0.61
+State,Ohio,40.388783,-82.764915,At or above proficient,2017,Percent,0.39
+State,Oklahoma,35.565342,-96.928917,Below basic,2017,Percent,0.37
+State,Oklahoma,35.565342,-96.928917,At or above basic,2017,Percent,0.63
+State,Oklahoma,35.565342,-96.928917,Below proficient,2017,Percent,0.71
+State,Oklahoma,35.565342,-96.928917,At or above proficient,2017,Percent,0.29
+State,Oregon,44.572021,-122.070938,Below basic,2017,Percent,0.37
+State,Oregon,44.572021,-122.070938,At or above basic,2017,Percent,0.63
+State,Oregon,44.572021,-122.070938,Below proficient,2017,Percent,0.67
+State,Oregon,44.572021,-122.070938,At or above proficient,2017,Percent,0.33
+State,Pennsylvania,40.590752,-77.209755,Below basic,2017,Percent,0.29
+State,Pennsylvania,40.590752,-77.209755,At or above basic,2017,Percent,0.71
+State,Pennsylvania,40.590752,-77.209755,Below proficient,2017,Percent,0.6
+State,Pennsylvania,40.590752,-77.209755,At or above proficient,2017,Percent,0.4
+State,Rhode Island,41.680893,-71.51178,Below basic,2017,Percent,0.31
+State,Rhode Island,41.680893,-71.51178,At or above basic,2017,Percent,0.69
+State,Rhode Island,41.680893,-71.51178,Below proficient,2017,Percent,0.61
+State,Rhode Island,41.680893,-71.51178,At or above proficient,2017,Percent,0.39
+State,South Carolina,33.856892,-80.945007,Below basic,2017,Percent,0.41
+State,South Carolina,33.856892,-80.945007,At or above basic,2017,Percent,0.59
+State,South Carolina,33.856892,-80.945007,Below proficient,2017,Percent,0.71
+State,South Carolina,33.856892,-80.945007,At or above proficient,2017,Percent,0.29
+State,South Dakota,44.299782,-99.438828,Below basic,2017,Percent,0.31
+State,South Dakota,44.299782,-99.438828,At or above basic,2017,Percent,0.69
+State,South Dakota,44.299782,-99.438828,Below proficient,2017,Percent,0.64
+State,South Dakota,44.299782,-99.438828,At or above proficient,2017,Percent,0.36
+State,Tennessee,35.747845,-86.692345,Below basic,2017,Percent,0.36
+State,Tennessee,35.747845,-86.692345,At or above basic,2017,Percent,0.64
+State,Tennessee,35.747845,-86.692345,Below proficient,2017,Percent,0.67
+State,Tennessee,35.747845,-86.692345,At or above proficient,2017,Percent,0.33
+State,Texas,31.054487,-97.563461,Below basic,2017,Percent,0.4
+State,Texas,31.054487,-97.563461,At or above basic,2017,Percent,0.6
+State,Texas,31.054487,-97.563461,Below proficient,2017,Percent,0.71
+State,Texas,31.054487,-97.563461,At or above proficient,2017,Percent,0.29
+State,Utah,40.150032,-111.862434,Below basic,2017,Percent,0.28
+State,Utah,40.150032,-111.862434,At or above basic,2017,Percent,0.72
+State,Utah,40.150032,-111.862434,Below proficient,2017,Percent,0.59
+State,Utah,40.150032,-111.862434,At or above proficient,2017,Percent,0.41
+State,Vermont,44.045876,-72.710686,Below basic,2017,Percent,0.27
+State,Vermont,44.045876,-72.710686,At or above basic,2017,Percent,0.73
+State,Vermont,44.045876,-72.710686,Below proficient,2017,Percent,0.57
+State,Vermont,44.045876,-72.710686,At or above proficient,2017,Percent,0.43
+State,Virginia,37.769337,-78.169968,Below basic,2017,Percent,0.26
+State,Virginia,37.769337,-78.169968,At or above basic,2017,Percent,0.74
+State,Virginia,37.769337,-78.169968,Below proficient,2017,Percent,0.57
+State,Virginia,37.769337,-78.169968,At or above proficient,2017,Percent,0.43
+State,Washington,47.400902,-121.490494,Below basic,2017,Percent,0.32
+State,Washington,47.400902,-121.490494,At or above basic,2017,Percent,0.68
+State,Washington,47.400902,-121.490494,Below proficient,2017,Percent,0.61
+State,Washington,47.400902,-121.490494,At or above proficient,2017,Percent,0.39
+State,West Virginia,38.491226,-80.954453,Below basic,2017,Percent,0.36
+State,West Virginia,38.491226,-80.954453,At or above basic,2017,Percent,0.64
+State,West Virginia,38.491226,-80.954453,Below proficient,2017,Percent,0.68
+State,West Virginia,38.491226,-80.954453,At or above proficient,2017,Percent,0.32
+State,Wisconsin,44.268543,-89.616508,Below basic,2017,Percent,0.34
+State,Wisconsin,44.268543,-89.616508,At or above basic,2017,Percent,0.66
+State,Wisconsin,44.268543,-89.616508,Below proficient,2017,Percent,0.65
+State,Wisconsin,44.268543,-89.616508,At or above proficient,2017,Percent,0.35
+State,Wyoming,42.755966,-107.30249,Below basic,2017,Percent,0.26
+State,Wyoming,42.755966,-107.30249,At or above basic,2017,Percent,0.74
+State,Wyoming,42.755966,-107.30249,Below proficient,2017,Percent,0.59
+State,Wyoming,42.755966,-107.30249,At or above proficient,2017,Percent,0.41

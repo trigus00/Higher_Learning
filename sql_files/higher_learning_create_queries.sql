@@ -11,7 +11,10 @@ CREATE TABLE incarceration (
   year integer,
   prisoner_count integer,
   state_population integer,
-  year_state character varying(100) PRIMARY KEY
+  year_state character varying(100) PRIMARY KEY,
+  state_abbr character varying(5),
+  lat float,
+  long float
 );
 
 
@@ -20,7 +23,10 @@ CREATE TABLE ed_enroll_exp (
   state character varying(50),
   year integer,
   enrollment integer,
-  total_expenditure integer
+  total_expenditure integer,
+  state_abbr character varying(5),
+  lat float,
+  long float
 );
 
 
@@ -28,7 +34,10 @@ CREATE TABLE prisoner_exp (
   state character varying(50),
   year integer,
   total_expenditure integer,
-  year_state character varying(100) PRIMARY KEY
+  year_state character varying(100) PRIMARY KEY,
+  state_abbr character varying(5),
+  lat float,
+  long float
 );
 
 
@@ -37,7 +46,10 @@ CREATE TABLE fourth_grade_read (
   achievement_level character varying(50),
   year integer,
   data integer,
-  year_state_ach_lvl character varying(100) PRIMARY KEY
+  year_state_ach_lvl character varying(100) PRIMARY KEY,
+  state_abbr character varying(5),
+  lat float,
+  long float
 );
 
 
@@ -46,6 +58,9 @@ CREATE TABLE fourth_grade_read (
 CREATE TABLE ed_corr_data (
 year_state character varying(100) PRIMARY KEY,
 state character varying(50),
+state_abbr character varying(5),
+lat float,
+long float,
 year integer,
 ed_enrollment integer,
 ed_total_exp_1k integer,
