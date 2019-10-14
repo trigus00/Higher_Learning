@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS fourth_grade_read;
 DROP TABLE IF EXISTS ed_corr_data;
 
 
+
 CREATE TABLE incarceration (
   state character varying(50),
   year integer,
@@ -45,6 +46,7 @@ CREATE TABLE fourth_grade_read (
 CREATE TABLE ed_corr_data (
 year_state character varying(100) PRIMARY KEY,
 state character varying(50),
+year integer,
 ed_enrollment integer,
 ed_total_exp integer,
 prisoner_count integer,
