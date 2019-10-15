@@ -185,7 +185,10 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup) {
 //*************************************************************************
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("assets/data/ed_corr_data.csv").then(function(edCorrData, err) {
+//http://localhost
+
+//d3.csv("/static/data/ed_corr_data.csv").then(function(edCorrData, err) {
+d3.json("http://localhost/ed_corr_data").then(function(edCorrData, err) {
   if (err) throw err;
 
 
