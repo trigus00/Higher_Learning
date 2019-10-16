@@ -118,13 +118,19 @@ def fourth_grade_read():
 
 
 
-@app.route("/ed_corr_data", methods=['GET'])
-def ed_corr_data():
-    """Return a list of sample names."""
+
+@app.route("/combined_data")
+def combine_data():
+    """Return a education and correction data."""
     sql_query5 = 'SELECT * FROM ed_corr_data'
-    results5 = pd.read_sql_query(sql_query5, db.session.bind).to_json(orient='records')
+    #results5 = pd.read_sql_query(sql_query5, db.session.bind)
+    results5 = pd.read_sql_query(sql_query5, db.session.bind).to_dict('records')
+    #x = results5.to_dict('records')
 
     return jsonify(results5)
+
+
+
 
 
 if __name__ == "__main__":

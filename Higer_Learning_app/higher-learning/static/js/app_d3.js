@@ -185,23 +185,52 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup, textGroup) {
 //*************************************************************************
 
 // Retrieve data from the CSV file and execute everything below
-//http://localhost
 
-//d3.csv("/static/data/ed_corr_data.csv").then(function(edCorrData, err) {
-d3.json("http://localhost/ed_corr_data").then(function(edCorrData, err) {
-  if (err) throw err;
+//   d3.csv("/static/data/ed_corr_data.csv").then(function(edCorrData, err) {
+//     if (err) throw err;
+//     console.log(edCorrData);
+// //    // parse data
+//     edCorrData.forEach(function(data) {
+//       data.cost_per_stu = +data.cost_per_stu;
+//       data.stu_to_pop_percent = +data.stu_to_pop_percent;
+//       data.ed_total_exp_1k = +data.ed_total_exp_1k;
+//       data.cost_per_prisoner = +data.cost_per_prisoner;
+//       data.prisoner_to_pop_percent = +data.prisoner_to_pop_percent;
+//       data.corr_total_exp_1k = +data.corr_total_exp_1k;
+//     });
 
 
+
+
+//d3.json(`ed_corr_data`).then(function(edCorrData, err) {
+//  if (err) throw err;
 
   // parse data
-  edCorrData.forEach(function(data) {
-    data.cost_per_stu = +data.cost_per_stu;
-    data.stu_to_pop_percent = +data.stu_to_pop_percent;
-    data.ed_total_exp_1k = +data.ed_total_exp_1k;
-    data.cost_per_prisoner = +data.cost_per_prisoner;
-    data.prisoner_to_pop_percent = +data.prisoner_to_pop_percent;
-    data.corr_total_exp_1k = +data.corr_total_exp_1k;
-  });
+//  edCorrData.forEach(function(data) {
+//    data.cost_per_stu = +data.cost_per_stu;
+//    data.stu_to_pop_percent = +data.stu_to_pop_percent;
+//    data.ed_total_exp_1k = +data.ed_total_exp_1k;
+//    data.cost_per_prisoner = +data.cost_per_prisoner;
+//   data.prisoner_to_pop_percent = +data.prisoner_to_pop_percent;
+//   data.corr_total_exp_1k = +data.corr_total_exp_1k;
+// });
+
+
+    const sourceData = `combined_data`;
+
+    d3.json(sourceData).then(function(edCorrData, err) {
+     if (err) throw err;
+     console.log(edCorrData)
+
+     edCorrData.forEach(function(data) {
+        data.cost_per_stu = +data.cost_per_stu;
+        data.stu_to_pop_percent = +data.stu_to_pop_percent;
+        data.ed_total_exp_1k = +data.ed_total_exp_1k;
+        data.cost_per_prisoner = +data.cost_per_prisoner;
+        data.prisoner_to_pop_percent = +data.prisoner_to_pop_percent;
+        data.corr_total_exp_1k = +data.corr_total_exp_1k;
+     });
+
 
 
 //********************************************************************************
