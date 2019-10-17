@@ -16,23 +16,25 @@ from flask_sqlalchemy import SQLAlchemy
 
 import psycopg2 as pg
 
+import sys
+import json
+sys.path.append("..")
+
 # Imports the methods needed to abstract classes into tables
 from sqlalchemy.ext.declarative import declarative_base
 
 # Allow us to declare column types
 from sqlalchemy import Column, Integer, String, Float 
 
-#from flask_heroku import Heroku
+from flask_heroku import Heroku
 
 #heroku = Heroku(app)
 
-import sys
-import json
-sys.path.append("..")
-from cred.cred_user import username
-from cred.cred_p import pgpass
-from cred.cred_host import host_loc
-from cred.cred_port import cred_port
+
+#from cred.cred_user import username
+#from cred.cred_p import pgpass
+#from cred.cred_host import host_loc
+#from cred.cred_port import cred_port
 
 
 app = Flask(__name__)
@@ -46,9 +48,11 @@ app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/bellybutton.sqlite"
 
 
-DB_URL = 'postgresql+psycopg2://'+ username +':' + pgpass + '@' +host_loc + ':' + cred_port + '/' + 'higher_learning'
+#DB_URL = 'postgresql+psycopg2://'+ username +':' + pgpass + '@' +host_loc + ':' + cred_port + '/' + 'higher_learning'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hrzannpwapaotd:6c2ca4a03b1e5a6f7841aee8cbcfb64c25d1dbbfef34a0421c43583630ffe86a@ec2-174-129-220-12.compute-1.amazonaws.com:5432/d16g5dlt9u453'
+
 #app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
-app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # silence the deprecation warning
 
 
