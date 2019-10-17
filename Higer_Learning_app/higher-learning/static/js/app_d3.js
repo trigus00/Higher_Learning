@@ -356,7 +356,7 @@ function populate_chart_by_year(year) {
       .attr("y", 70)
       .attr("xValue", "ed_total_exp_1k") // value to grab for event listener
       .classed("inactive", true)
-      .text("Toal Education Expense (000s)");
+      .text("Total Education Expense (000s)");
 
 
 
