@@ -80,12 +80,19 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/year")
+def years():
+    """Return a list of years"""
+    years = db.session.query(Ed_Corr_Data.year).group_by(Ed_Corr_Data.year).order_by(Ed_Corr_Data.year.desc()).all()
 
+    return jsonify(list(years))
+
+    
 @app.route("/incarceration", methods=['GET'])
 def incarceration():
     """Return incareceration data"""
     sql_query1 = 'SELECT * FROM incarceration'
-    results1 = pd.read_sql_query(sql_query1, db.session.bind).to_json(orient='records')
+    results1 = pd.read_sql_query(sql_query1, db.session.bind).to_dict('records')
 
     return jsonify(results1)
 
@@ -123,15 +130,26 @@ def fourth_grade_read():
 def combine_data():
     """Return a education and correction data."""
     sql_query5 = 'SELECT * FROM ed_corr_data'
-    #results5 = pd.read_sql_query(sql_query5, db.session.bind)
     results5 = pd.read_sql_query(sql_query5, db.session.bind).to_dict('records')
-    #x = results5.to_dict('records')
 
     return jsonify(results5)
+
+
+@app.route("/combined_data/<year>")
+def combine_dataYear(year):
+    """Return a education and correction data."""
+    
+    sql_query6 = 'SELECT * FROM ed_corr_data'
+    results6_df = pd.read_sql_query(sql_query6, db.session.bind)
+    filtered_results6 = results6_df[results6_df.year == int(year)]
+    data6 = filtered_results6.to_dict('records')
+    
+    print(data6)
+    return jsonify(data6)
 
 
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
