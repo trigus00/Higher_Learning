@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Basic Map</title>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="/js/style.css">
+</head>
+
+<body>
+  <!-- The div where we will inject our map -->
+  <div id="map"></div>
+  
+  <!-- API key -->
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script type="text/javascript" src="/js/config.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="/js/incarceration.js"></script>
+  <html>
+
+
+<select id = "dropdown" onchange= "getData(this.value)" >
+  <option value="2006" >2006</option>
+  <option value="2007" >2007</option>
+  <option value="2008">2008</option>
+  <option value="2009">2009</option>
+  <option value="2010">2010</option>
+  <option value="2011">2011</option>
+  <option value="2012">2012</option>
+  <option value="2013">2013</option>
+  <option value="2014">2014</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+
+  
+</select>
+  
+
+</html>
+
+
+
+  
+</body>
+</html>
